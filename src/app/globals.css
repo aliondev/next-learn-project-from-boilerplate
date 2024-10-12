@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body > div {
+    display: flex;
+    justify-content: center;
+}
+
+body > div > div {
+    height: 100vh;
+    width: 80%;
+}

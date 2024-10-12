@@ -1,0 +1,11 @@
+.container {
+    background: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navBarLink {
+    margin: 20px;
+    padding: 25px;
+}

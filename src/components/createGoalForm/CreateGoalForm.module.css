@@ -1,0 +1,19 @@
+.nameInput {
+    border: solid 1px black;
+}
+
+.submitBtn {
+    border: solid 1px black;
+    padding: 5px 10px;
+    width: fit-content;
+}
+
+.submitBtn:hover {
+    box-shadow: 0px 0px 5px black;
+}
+
+.form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
