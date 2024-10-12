@@ -1,5 +1,11 @@
 import styles from './styles.module.css'
+import { fetchGoals } from '@/app/lib/actions';
+import GoalsItem from "@/app/goals/goalsItem";
 
-export default function Page() {
-  return <div className={styles.container}>Goals</div>
+export default async function Page() {
+  const goals = await fetchGoals();
+  return (<div className={styles.container}>
+    Goals:
+    {goals.map(goal => <GoalsItem name={goal.name} id={goal.id} />)}
+  </div>);
 }
