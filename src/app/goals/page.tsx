@@ -6,6 +6,8 @@ export default async function Page() {
   const goals = await fetchGoals();
   return (<div className={styles.container}>
     Goals:
-    {goals.map(goal => <GoalsItem name={goal.name} id={goal.id} />)}
+    {goals.map(goal =>
+      <GoalsItem name={goal.name} id={goal.id} key={goal.id} />
+    )}
   </div>);
 }
