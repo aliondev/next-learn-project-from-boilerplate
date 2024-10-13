@@ -13,6 +13,7 @@ export async function createGoal(formData: FormData) {
       VALUES (${name}, ${id})
   `
 
+  revalidatePath('/goals');
   redirect('/goals');
 }
 
@@ -20,6 +21,16 @@ export async function fetchGoals() {
   const queryResult = await sql`
       SELECT name, id
       FROM goalsfoo3
+  `;
+
+  return queryResult.rows;
+}
+
+export async function fetchGoal(id: string) {
+  const queryResult = await sql`
+      SELECT name, id
+      FROM goalsfoo3
+      WHERE id = ${id}
   `;
 
   return queryResult.rows;

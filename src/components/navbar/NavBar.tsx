@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <div className={styles.container}>
       <Link className={styles.navBarLink} href="/goals">Goals</Link>
-      <Link className={styles.navBarLink} href="/create">Create</Link>
+      <Link className={styles.navBarLink} href="/create-goal">Create</Link>
     </div>
   )
 }
